@@ -7,10 +7,10 @@ import ProductEditPage from './pages/products/ProductEditPage'
 import UserListPage from './pages/users/UserListPage'
 import UserNewPage from './pages/users/UserNewPage'
 import UserEditPage from './pages/users/UserEditPage'
-// import ClientDetailPage from './pages/clients/ClientDetailPage'
-// import ClientEditPage from './pages/clients/ClientEditPage' 
-// import ClientListPage from './pages/clients/ClientListPage'
-// import ClientNewPage from './pages/clients/ClientNewPage'
+import ClientDetailPage from './pages/clients/ClientDetailPage'
+import ClientEditPage from './pages/clients/ClientEditPage' 
+import ClientListPage from './pages/clients/ClientListPage'
+import ClientNewPage from './pages/clients/ClientNewPage'
 
 function App() {
   return (
@@ -69,10 +69,10 @@ function App() {
             <Route path="/users/:id/edit" element={<UserEditPage />} />
 
     
-            {/* <Route path="/clients" element={<ClientListPage />} />
+            <Route path="/clients" element={<ClientListPage />} />
            <Route path="/clients/new" element={<ClientNewPage />} />
              <Route path="/clients/:id" element={<ClientDetailPage />} />
-              <Route path="/clients/:id/edit" element={<ClientEditPage />} /> */}
+              <Route path="/clients/:id/edit" element={<ClientEditPage />} />
             
             {/* Pages à implémenter */}
             <Route path="/clients" element={
