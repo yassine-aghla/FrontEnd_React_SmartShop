@@ -11,12 +11,14 @@ import ClientDetailPage from './pages/clients/ClientDetailPage'
 import ClientEditPage from './pages/clients/ClientEditPage' 
 import ClientListPage from './pages/clients/ClientListPage'
 import ClientNewPage from './pages/clients/ClientNewPage'
-
+import OrderDetailPage from './pages/orders/OrderDetailPage'
+import OrderListPage from './pages/orders/OrderListPage'
+import OrderNewPage from './pages/orders/OrderNewPage'
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        {/* Navigation améliorée */}
+
         <nav className="bg-white shadow-lg border-b">
           <div className="container mx-auto px-4 py-3">
             <div className="flex justify-between items-center">
@@ -58,12 +60,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/products" replace />} />
             
-            {/* Routes Produits */}
             <Route path="/products" element={<ProductListPage />} />
             <Route path="/products/new" element={<ProductNewPage />} />
             <Route path="/products/:id/edit" element={<ProductEditPage />} />
             
-            {/* Routes Utilisateurs */}
             <Route path="/users" element={<UserListPage />} />
             <Route path="/users/new" element={<UserNewPage />} />
             <Route path="/users/:id/edit" element={<UserEditPage />} />
@@ -73,24 +73,15 @@ function App() {
            <Route path="/clients/new" element={<ClientNewPage />} />
              <Route path="/clients/:id" element={<ClientDetailPage />} />
               <Route path="/clients/:id/edit" element={<ClientEditPage />} />
+
+            <Route path="/orders" element={<OrderListPage />} />
+            <Route path="/orders/new" element={<OrderNewPage />} />
+           <Route path="/orders/:id" element={<OrderDetailPage />} />
             
-            {/* Pages à implémenter */}
-            <Route path="/clients" element={
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Page Clients</h2>
-                <p className="text-gray-600">À implémenter</p>
-              </div>
-            } />
-            <Route path="/orders" element={
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Page Commandes</h2>
-                <p className="text-gray-600">À implémenter</p>
-              </div>
-            } />
+
           </Routes>
         </main>
 
-        {/* Pied de page */}
         <footer className="bg-gray-800 text-white py-6 mt-12">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center">
